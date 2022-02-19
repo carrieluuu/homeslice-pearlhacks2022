@@ -1,0 +1,98 @@
+h1 {
+    font-family: "Chango", cursive;
+  }
+  
+  h2 {
+    font-weight: 800;
+  }
+  
+  h3 {
+    font-weight: 600;
+  }
+  h2 {
+    font-weight: 500;
+  }
+  body {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    background-color: #ffffff;
+  }
+  
+  /* Nav Bar Styling */
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav {
+    display: inline-block;
+    background-color: #757bcb;
+  }
+  
+  .nav_elements {
+    text-decoration: none;
+  }
+  
+  .nav-link {
+    padding: 0.5rem 0rem;
+  }
+  
+  #logo {
+    width: 175px;
+  }
+  
+  /* End Nav Bar Styling */
+  
+  .content {
+    padding-left: 20px;
+    padding-top: 20px;
+  }
+  
+  .content a {
+    text-decoration: none;
+    color: grey;
+  }
+  
+  footer {
+    color: white;
+    background-color: #757bcb;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }
+  
+  #topic {
+    width: 50%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  
+  label {
+    font-size: small;
+  }
+  
+  td {
+    padding-right: 10px;
+    padding-bottom: 10px;
+  }
+  
+  .align-top {
+    vertical-align: top;
+  }
+  
+  .align-right {
+    text-align: right;
+  }
+  
+  .fixed-width {
+    width: 300px;
+  }
+  
+  input,
+  textarea {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
