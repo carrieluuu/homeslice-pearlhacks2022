@@ -1,6 +1,7 @@
 // require modules
 const express = require('express');
 const morgan = require('morgan');
+const listingRoutes = require('./routes/listingRoutes');
 
 //create application
 const app = express();
@@ -20,6 +21,8 @@ app.use(morgan('tiny'));
 app.get('/', (req, res) => {
     res.render('index');
 });
+
+app.use('/listings', listingRoutes);
 
 //start the server
 app.listen(port, host, () => {
