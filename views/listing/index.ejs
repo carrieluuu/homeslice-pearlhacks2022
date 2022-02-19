@@ -1,118 +1,205 @@
 <%- include('../partials/header.ejs') %>
 
-<head>
-    <meta charset="UTF-8">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Chango&family=Montserrat:wght@200;500;600;800&display=swap"
-        rel="stylesheet">
-    <title>Listings</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Chango&family=Montserrat:wght@200;500;600;800&display=swap"
+            rel="stylesheet">
+        <title>Listings</title>
+    </head>
 
-<!-- gray bg -->	
-<section class="container tm-home-section-1" id="more">
-    <div class="section-margin-top">
-        <div class="row">				
-            <div class="tm-section-header">
-                <div class="col-lg-3 col-md-3 col-sm-3"><hr></div>
-                <div class="col-lg-6 col-md-6 col-sm-6"><h2 class="tm-section-title">Listings For You</h2></div>
-                <div class="col-lg-3 col-md-3 col-sm-3"><hr></div>	
+    <body>
+        <!-- Search Bar -->
+        <section>
+            <div class="s002">
+                <form>
+                    <fieldset>
+                        <legend>SEARCH HOUSING</legend>
+                    </fieldset>
+                    <div class="inner-form">
+                        <div class="input-field first-wrap">
+                            <div class="icon-wrap">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <input id="search" type="text" placeholder="What are you looking for?" />
+                        </div>
+                        <div class="input-field second-wrap">
+                            <div class="icon-wrap">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path
+                                        d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <input class="datepicker" id="depart" type="text" placeholder="20 Feb 2022" />
+                        </div>
+                        <div class="input-field third-wrap">
+                            <div class="icon-wrap">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path
+                                        d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <input class="datepicker" id="return" type="text" placeholder="20 Feb 2022" />
+                        </div>
+                        <div class="input-field fouth-wrap">
+                            <div class="icon-wrap">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <select data-trigger="" name="choices-single-defaul">
+                                <option placeholder="">1 Bedroom</option>
+                                <option>2 Bedrooms</option>
+                                <option>3+ Bedrooms</option>
+                            </select>
+                        </div>
+                        <div class="input-field fifth-wrap">
+                            <button class="btn-search" type="button">SEARCH</button>
+                        </div>
+                    </div>
+                </form>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                <div class="tm-listing-box-1">
-                    <img src="img/listing-03.jpg" alt="image" class="img-responsive">
-                    <div class="tm-listing-box-1-info">
-                        <div class="tm-listing-box-1-info-left">
-                            <p class="text-uppercase margin-bottom-20">Proin Gravida Nibhvel Lorem Quis Bind</p>	
-                            <p class="gray-text">28 March 2084</p>
-                        </div>
-                        <div class="tm-listing-box-1-info-right">
-                            <p class="gray-text listing-1-description">Lorem quis bibendum auctor, nisi elit consequat ipsum, sec sagittis sem nibh id elit.</p>	
-                        </div>							
-                    </div>
-                    <div class="tm-listing-box-1-link">
-                        <div class="tm-listing-box-1-link-left">
-                            Lease Term: 8 days
-                        </div>
-                        <a href="#" class="tm-listing-box-1-link-right">
-                            $2,200								
-                        </a>							
-                    </div>
-                </div>					
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                <div class="tm-listing-box-1">
-                    <img src="img/listing-04.jpg" alt="image" class="img-responsive">
-                    <div class="tm-listing-box-1-info">
-                        <div class="tm-listing-box-1-info-left">
-                            <p class="text-uppercase margin-bottom-20">Proin Gravida Nibhvel Lorem Quis Bind</p>	
-                            <p class="gray-text">26 March 2084</p>
-                        </div>
-                        <div class="tm-listing-box-1-info-right">
-                            <p class="gray-text listing-1-description">Lorem quis bibendum auctor, nisi elit consequat ipsum, sec sagittis sem nibh id elit.</p>	
-                        </div>							
-                    </div>
-                    <div class="tm-listing-box-1-link">
-                        <div class="tm-listing-box-1-link-left">
-                            Duration: 9 days
-                        </div>
-                        <a href="#" class="tm-listing-box-1-link-right">
-                            $1,800								
-                        </a>							
-                    </div>
-                </div>					
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                <div class="tm-listing-box-1">
-                    <img src="img/listing-05.jpg" alt="image" class="img-responsive">
-                    <div class="tm-listing-box-1-info">
-                        <div class="tm-listing-box-1-info-left">
-                            <p class="text-uppercase margin-bottom-20">Proin Gravida Nibhvel Lorem Quis Bind</p>	
-                            <p class="gray-text">24 March 2084</p>
-                        </div>
-                        <div class="tm-listing-box-1-info-right">
-                            <p class="gray-text listing-1-description">Lorem quis bibendum auctor, nisi elit consequat ipsum, sec sagittis sem nibh id elit.</p>	
-                        </div>							
-                    </div>
-                    <div class="tm-listing-box-1-link">
-                        <div class="tm-listing-box-1-link-left">
-                            Duration: 8 days
-                        </div>
-                        <a href="#" class="tm-listing-box-1-link-right">
-                            $1,600								
-                        </a>							
-                    </div>
-                </div>					
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                <div class="tm-listing-box-1">
-                    <img src="img/listing-06.jpg" alt="image" class="img-responsive">
-                    <div class="tm-listing-box-1-info">
-                        <div class="tm-listing-box-1-info-left">
-                            <p class="text-uppercase margin-bottom-20">Proin Gravida Nibhvel Lorem Quis Bind</p>	
-                            <p class="gray-text">22 March 2084</p>
-                        </div>
-                        <div class="tm-listing-box-1-info-right">
-                            <p class="gray-text listing-1-description">Lorem quis bibendum auctor, nisi elit consequat ipsum, sec sagittis sem nibh id elit.</p>	
-                        </div>							
-                    </div>
-                    <div class="tm-listing-box-1-link">
-                        <div class="tm-listing-box-1-link-left">
-                            Duration: 5 days
-                        </div>
-                        <a href="#" class="tm-listing-box-1-link-right">
-                            $1,200								
-                        </a>							
-                    </div>
-                </div>					
-            </div>
-        </div>		
-    </div>
-</section>		
+            <script src="js/extention/choices.js"></script>
+            <script src="js/extention/flatpickr.js"></script>
+            <script>
+                flatpickr(".datepicker",
+                    {});
 
-<%- include('../partials/footer.ejs') %>
+            </script>
+            <script>
+                const choices = new Choices('[data-trigger]',
+                    {
+                        searchEnabled: false,
+                        itemSelectText: '',
+                    });
+
+            </script>
+        </section>
+
+        <!-- Listings -->
+        <section class="container tm-home-section-1" id="more">
+            <div class="section-margin-top">
+                <div class="row">
+                    <div class="tm-section-header">
+                        <div class="col-lg-3 col-md-3 col-sm-3">
+                            <hr>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <h2 class="tm-section-title">All Listings</h2>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-3">
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="tm-listing-box-1">
+                            <img src="img/listing-03.jpg" alt="image" class="img-responsive">
+                            <div class="tm-listing-box-1-info">
+                                <div class="tm-listing-box-1-info-left">
+                                    <p class="text-uppercase margin-bottom-20">Proin Gravida Nibhvel Lorem Quis Bind</p>
+                                    <p class="gray-text">28 March 2084</p>
+                                </div>
+                                <div class="tm-listing-box-1-info-right">
+                                    <p class="gray-text listing-1-description">Lorem quis bibendum auctor, nisi elit
+                                        consequat ipsum, sec sagittis sem nibh id elit.</p>
+                                </div>
+                            </div>
+                            <div class="tm-listing-box-1-link">
+                                <div class="tm-listing-box-1-link-left">
+                                    Lease Term: 8 days
+                                </div>
+                                <a href="#" class="tm-listing-box-1-link-right">
+                                    $2,200
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="tm-listing-box-1">
+                            <img src="img/listing-04.jpg" alt="image" class="img-responsive">
+                            <div class="tm-listing-box-1-info">
+                                <div class="tm-listing-box-1-info-left">
+                                    <p class="text-uppercase margin-bottom-20">Proin Gravida Nibhvel Lorem Quis Bind</p>
+                                    <p class="gray-text">26 March 2084</p>
+                                </div>
+                                <div class="tm-listing-box-1-info-right">
+                                    <p class="gray-text listing-1-description">Lorem quis bibendum auctor, nisi elit
+                                        consequat ipsum, sec sagittis sem nibh id elit.</p>
+                                </div>
+                            </div>
+                            <div class="tm-listing-box-1-link">
+                                <div class="tm-listing-box-1-link-left">
+                                    Duration: 9 days
+                                </div>
+                                <a href="#" class="tm-listing-box-1-link-right">
+                                    $1,800
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="tm-listing-box-1">
+                            <img src="img/listing-05.jpg" alt="image" class="img-responsive">
+                            <div class="tm-listing-box-1-info">
+                                <div class="tm-listing-box-1-info-left">
+                                    <p class="text-uppercase margin-bottom-20">Proin Gravida Nibhvel Lorem Quis Bind</p>
+                                    <p class="gray-text">24 March 2084</p>
+                                </div>
+                                <div class="tm-listing-box-1-info-right">
+                                    <p class="gray-text listing-1-description">Lorem quis bibendum auctor, nisi elit
+                                        consequat ipsum, sec sagittis sem nibh id elit.</p>
+                                </div>
+                            </div>
+                            <div class="tm-listing-box-1-link">
+                                <div class="tm-listing-box-1-link-left">
+                                    Duration: 8 days
+                                </div>
+                                <a href="#" class="tm-listing-box-1-link-right">
+                                    $1,600
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="tm-listing-box-1">
+                            <img src="img/listing-06.jpg" alt="image" class="img-responsive">
+                            <div class="tm-listing-box-1-info">
+                                <div class="tm-listing-box-1-info-left">
+                                    <p class="text-uppercase margin-bottom-20">Proin Gravida Nibhvel Lorem Quis Bind</p>
+                                    <p class="gray-text">22 March 2084</p>
+                                </div>
+                                <div class="tm-listing-box-1-info-right">
+                                    <p class="gray-text listing-1-description">Lorem quis bibendum auctor, nisi elit
+                                        consequat ipsum, sec sagittis sem nibh id elit.</p>
+                                </div>
+                            </div>
+                            <div class="tm-listing-box-1-link">
+                                <div class="tm-listing-box-1-link-left">
+                                    Duration: 5 days
+                                </div>
+                                <a href="#" class="tm-listing-box-1-link-right">
+                                    $1,200
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+
+    <%- include('../partials/footer.ejs') %>
