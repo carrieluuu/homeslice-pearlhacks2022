@@ -1,41 +1,32 @@
-//Use express router object
 const express = require('express');
+
+//add controller
+const controller = require('../controllers/listingController');
+
+//Use express router object
 const router = express.Router();
 
+
 //GET /listings: send all listings to the user
-router.get('/', (req, res) => {
-    res.send('send all stories');
-});
+router.get('/', controller.index);
 
 //GET /listings/new: send html form for creating a new listing
-router.get('/new', (req, res) => {
-    res.send('send the new form');
-});
+router.get('/new', controller.new);
 
 //POST /listings: create a new listing
-router.get('/new', (req, res) => {
-    res.send('created a new listing');
-});
+router.post('/', controller.create);
 
 //GET /listings/:id: send details of listing identified by id
-router.get('/:id', (req, res) => {
-    res.send('send the listing with id ' + req.params.id);
-});
+router.get('/:id', controller.details);
 
 //GET /listings/:id/edit: send html form for editing an existing story
-router.get('/:id/edit', (req, res) => {
-    res.send('send the edit form');
-});
+router.get('/:id/edit', controller.edit);
 
 //PUT /listings/:id: update the listing identified by the id
-router.put('/:id', (req, res) => {
-    res.send('update story with id ' + req.params.id);
-});
+router.put('/:id', controller.update);
 
 //DELETE /listings/:id: delete the listing identified by the id
-router.put('/:id', (req, res) => {
-    res.send('delete story with id ' + req.params.id);
-});
+router.delete('/:id', controller.delete);
 
 
 //export router module
