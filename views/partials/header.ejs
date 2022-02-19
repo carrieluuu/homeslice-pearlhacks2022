@@ -15,28 +15,39 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark">
-        <a class="nav-item nav-link " href="/"><img class="navbar-brand" id="logo" src="img/logo.png"></a>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href='/listings'>LISTINGS</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href='/mylisting'>MY LISTINGS</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href='/about'>ABOUT</a>
-                </li>
+        <div class="container-fluid">
+            <a class="nav-item nav-link " href="/"><img class="navbar-brand" id="logo" src="img/logo.png"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="/">HOME</a>
+              <a class="nav-link" href='/listings'>LISTINGS</a>
+              <a class="nav-link" href='/mylistings'>MY LISTINGS</a>
+              <a class="nav-link" href='/about'>ABOUT</a>
+              <% if(!isAuthenticated){ %>
                 <li class="nav-item">
                     <a class="nav-link" href='/login'>LOGIN</a>
                 </li>
-
-                <br><br>
-                <span></span>
-                <br>
-            </ul>
+                <% } else { %>
+                <li class="nav-item">
+                    <a class="nav-link" href='/logout'>LOGOUT</a>
+                </li>
+                <% } %>
+            </div>
+          </div>
         </div>
-    </nav>
+      </nav>
+   
+    <% if(user) { %>
+    <div class = "content">
+        <h2> Hello
+            <%= user.nickname.charAt(0).toUpperCase() + user.nickname.slice(1) %>
+            !
+        </h2> 
+    </div>
+    <% } %>
 </body>
 
 </html>
