@@ -16,7 +16,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
-            <a class="nav-item nav-link " href="/"><img class="navbar-brand" id="logo" src="img/logo.png"></a>
+            <a class="nav-item nav-link " href="/"><img class="navbar-brand" id="logo" src="../img/logo.png"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -34,17 +34,16 @@
                 <li class="nav-item">
                     <a class="nav-link" href='/logout'>LOGOUT</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled">Hello
+                        <%= user.nickname.charAt(0).toUpperCase() + user.nickname.slice(1) %>
+                        !</a>
+                </li>
+                
                 <% } %>
             </div>
           </div>
         </div>
       </nav>
    
-    <% if(user) { %>
-    <div class = "content">
-        <h2> Hello
-            <%= user.nickname.charAt(0).toUpperCase() + user.nickname.slice(1) %>
-            !
-        </h2> 
-    </div>
-    <% } %>
+
