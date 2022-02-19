@@ -32,6 +32,11 @@ router.put('/:id', (req, res) => {
     res.send('update story with id ' + req.params.id);
 });
 
+//DELETE /listings/:id: delete the listing identified by the id
+router.put('/:id', (req, res) => {
+    res.send('delete story with id ' + req.params.id);
+});
+
 
 //export router module
 module.exports = router;
