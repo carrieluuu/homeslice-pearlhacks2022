@@ -53,6 +53,66 @@ h1 {
     color: grey;
   }
   
+  /* listing */
+.tm-listing-box-1 {
+	width: 100%;
+	max-width: 532px;
+	margin-bottom: 50px;
+}
+.tm-listing-box-1-info {
+	background: white;
+	padding: 40px;
+	overflow: hidden;
+}
+.tm-listing-box-1-info-left,
+.tm-listing-box-1-info-right {
+	float: left;
+	width: 50%;
+}
+.tm-listing-box-1-info-left {
+	border-right: 1px solid #B1B1B1;
+	padding-right: 30px;
+}
+.tm-listing-box-1-info-right { padding-left: 30px; }
+.margin-bottom-20 { margin-bottom: 20px; }
+.margin-bottom-30 { margin-bottom: 30px; }
+.gray-text { color: #B1B1B1; }
+.listing-1-description { line-height: 1.8; }
+.tm-listing-box-1-link { overflow: hidden }
+.tm-listing-box-1-link-left { 
+	background-color: #8C6BCF;
+	padding: 20px 30px;
+	float: left;
+	width: 75%;
+	text-transform: uppercase;
+}
+.tm-listing-box-1-link-right {
+	float: left;
+	background-color: #964EC2;
+	font-weight: 600;
+	font-size: 18px;
+	display: block;
+	padding: 17px 30px;
+	width: 25%;
+	transition: all 0.3s;
+	text-align: center;
+}
+.tm-listing-box-1-link-right:hover,
+.tm-listing-box-1-link-right:focus {
+	color: white;
+	background-color: #A05EC8;
+}
+.tm-listing-box-1-link-left,
+.tm-listing-box-1-link-right {
+	color: white;
+	height: 60px;
+}
+
+.margin-bottom-15 { margin-bottom: 15px; }
+.margin-bottom-5 { margin-bottom: 5px; }
+
+/* End of Listing CSS */
+
   footer {
     color: white;
     background-color: #757bcb;

@@ -3,9 +3,9 @@ const model = require('../models/listing');
 
 //GET /listings: send all listings to the user
 exports.index = (req, res) => {
-    res.send(model.find());
-    // let listings = model.find();
-    // res.render('/listings/index', {listings});
+    //res.send(model.find());
+    let listings = model.find();
+    res.render('./listing/index', {listings});
 };
 
 //GET /listings/new: send html form for creating a new listing
