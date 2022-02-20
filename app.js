@@ -35,6 +35,10 @@ app.get('/', (req, res) => {
     res.render('index', { isAuthenticated: req.oidc.isAuthenticated(), user: req.oidc.user });
 });
 
+app.get('/about', (req, res) => {
+    res.render('about', { isAuthenticated: req.oidc.isAuthenticated(), user: req.oidc.user });
+});
+
 app.use('/listings', listingRoutes);
 
 //start the server
