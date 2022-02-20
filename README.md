@@ -49,7 +49,7 @@ The team would love to continue to work on developing additional features for th
 * Expand the map to show all listings
 
 ## Built With
-[ auth0 ] [ bootstrap ] [ cockroachdb ] [ css ] [ ejs ] [ express.js ] [ github ] [ google-maps ] [ html5 ] [ javascript ] [ node.js ] [ sql ] [ visual-studio-code ]
+| auth0 | bootstrap | cockroachdb | css | ejs | express.js | github | google-maps | html5 | javascript | node.js | sql | visual-studio-code |
 
 ## Photo Gallery 
 ### Home Page
