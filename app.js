@@ -47,10 +47,6 @@ app.get('/', (req, res) => {
     res.render('index', { isAuthenticated: req.oidc.isAuthenticated(), user: req.oidc.user });
 });
 
-app.get('/about', (req, res) => {
-    res.render('about', { isAuthenticated: req.oidc.isAuthenticated(), user: req.oidc.user });
-});
-
 const upload = multer({
     dest: "public/img"
     // you might also want to set some limits: https://github.com/expressjs/multer#limits
