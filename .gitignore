@@ -1,3 +1,7 @@
+# secrets
+db-connection-info.secret
+postgresql-root.crt
+
 # Logs
 logs
 *.log
