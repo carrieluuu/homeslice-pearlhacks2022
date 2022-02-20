@@ -36,7 +36,7 @@ exports.details = (req, res) => {
     let listing = model.findById(id);
     //check if id exists
     if(listing) {
-        res.render('./listing/details', {listing:listing, isAuthenticated: req.oidc.isAuthenticated(), user: req.oidc.user});
+        res.render('./listing/details', {listing:listing, isAuthenticated: req.oidc.isAuthenticated(), user: req.oidc.user, DateTime});
     } else {
         res.status(404).send('Cannot find listing with id ' + id);
     }
