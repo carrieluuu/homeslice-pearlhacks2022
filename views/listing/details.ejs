@@ -1,24 +1,65 @@
 <%- include('../partials/header.ejs') %>
+    <br /> <br />
+    <div class="container">
+        <div class="row col-lg-12">
+            <div class="col-9">
+                <!--TODO: add ", Address 2 (if exists)" -->
+                <h2><%=listing.address_1%></h2>
+            </div>
+            <div class="col-9">
+                <h4><%=listing.city%>, <%=listing.state%> <%=listing.zip%></h4>
+            </div>
+            <br />
+            <div class="col-lg-7">
+                <img src="/img/listings/Listing5.png" class="mx-auto" alt="image" style="width: 100%">
+            </div>
+            <div class="col-5">
+                <h5><strong>College:</strong>
+                    <%=listing.college%>
+                </h5>
+                <h5><strong>Offering:</strong>
+                    <%=listing.offering_description%>
+                </h5>
+                <br>
+                <h5><strong>Host:</strong>
+                    <%=listing.host_name%>
+                </h5>
+                <h5><strong>Phone Number:</strong>
+                    <%=listing.phone_num%>
+                </h5>
+                <h5><strong>Email:</strong>
+                    <%=listing.email%>
+                </h5>
+                <br>
+                <h5><strong>Start Date:</strong>
+                    <%=listing.start_stay%>
+                </h5>
+                <!--TODO: convert to date -->
+                <h5><strong>End Date:</strong>
+                    <%=listing.end_stay%>
+                </h5>
+                <!--TODO: convert to date -->
+                <br>
+                <h5><strong>Bed: </strong>
+                    <%=listing.num_of_bedrooms %> <strong> &nbsp; | &nbsp; Bath: </strong>
+                        <%=listing.num_of_bathrooms %>
+                </h5>
+                <h5><strong>Amenities:</strong>
+                    <%=listing.amenities%>
+                </h5>
+            </div>
+        </div>
+        <div class="col-6">
+            <br>
+            <h5><strong>Total Price:</strong> $<%=listing.price%>
+            </h5>
+            <br>
+            <a class="btn btn-primary" href="#" role="button" style="border-radius: 40px; border-color: #757bcb; background-color: #757bcb;">Book Me!</a>
+            <br>
+            <br>
+            <br>
+        </div>
+    </div>
+    </div>
 
-<div class="content">
-    <h2><%= listing.host_name %></h2>
-    <h3>Housing</h3>
-    <p>Host: Zaina Shawar</p>
-    <p>Number: 704-340-4222</p>
-    <p>Email: zainashawar@gmail.com</p>
-    <br>
-    <p>Address: 9928 Paxton Run Road</p>
-    <p>Additional Address info: </p>
-    <p>City, state, zip</p>
-    <p>March 5th - March 30th</p>
-    <p>Price: $400</p>
-    <p>I am looking for roomates to buy out the extra room. There are a lot of perks.
-        Contact me if interested using the number above
-    </p>
-    <p>4 bedrooms</p>
-    <p>3 baths</p>
-    <p>Amenities: We have a kitchen, tv, hot tub, and living area</p>
-    <img src="../../public/img/listings/Listing1.png" alt="">
-</div>
-
-<%- include('../partials/footer.ejs') %>
+    <%- include('../partials/footer.ejs') %>
