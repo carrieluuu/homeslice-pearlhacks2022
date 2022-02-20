@@ -16,7 +16,7 @@
                                     </path>
                                 </svg>
                             </div>
-                            <input id="search" type="text" placeholder="What are you looking for?" />
+                            <input id="search" type="text" placeholder="What are you looking for?" style="border-radius: 40px 0px 0px 40px;" />
                         </div>
                         <div class="input-field second-wrap">
                             <div class="icon-wrap">
@@ -36,7 +36,7 @@
                                     </path>
                                 </svg>
                             </div>
-                            <input class="datepicker" id="return" type="text" placeholder="20 Feb 2022" />
+                            <input class="datepicker" id="return" type="text" placeholder="20 Feb 2022"  />
                         </div>
                         <div class="input-field fouth-wrap">
                             <div class="icon-wrap">
@@ -54,7 +54,7 @@
                             </select>
                         </div>
                         <div class="input-field fifth-wrap">
-                            <a href="#searchstart"><button class="btn-search" type="button">SEARCH</button></a>
+                            <a href="#searchstart"><button class="btn-search" type="button" style="border-radius: 0px 40px 40px 0px;">SEARCH</button></a>
                         </div>
                     </div>
                 </form>
@@ -92,13 +92,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="row" id="searchstart">
+                <div class="row" id="searchstart" >
                     <% if(listings.length) { listings.forEach(listing=>{%>
-                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" >
                         <a href="/listings/<%=listing.id%>" style="color:black">
-                        <div class="tm-listing-box-1">
-                            <img src="/img/<%=listing.image_path%>" alt="image" class="img-responsive" style="width: 100%">
-                            <div class="tm-listing-box-1-info">
+                        <div class="tm-listing-box-1" >
+                            <img src="/img/<%=listing.image_path%>" alt="image" class="img-responsive" style="width: 100%; border-radius: 40px 40px 0px 0px;">
+                            <div class="tm-listing-box-1-info" style="background-color:lavender;">
                                 <div class="tm-listing-box-1-info-left">
                                     <p class="text-uppercase margin-bottom-20"><%=listing.college%></p>
                                     <p class="margin-bottom-20"><%=listing.housing_type%></p>
@@ -108,7 +108,7 @@
                                     <p class="listing-1-description"><%=listing.offering_description%></p>
                                 </div>
                             </div>
-                            <div class="tm-listing-box-1-link">
+                            <div class="tm-listing-box-1-link" style="border-radius: 0px 0px 40px 40px;">
                                 <div class="tm-listing-box-1-link-left">
                                     Bed: <%=listing.num_of_bedrooms %> &nbsp; | &nbsp; Bath: <%=listing.num_of_bathrooms %> 
                                 </div>
