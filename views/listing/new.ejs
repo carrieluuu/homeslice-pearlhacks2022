@@ -7,7 +7,7 @@
                 <p class="pform">Becoming a Host is just one form away.</p>
             </div>
         </section>
-        <form action="/listings" method="POST">
+        <form action="/listings" method="POST" onsubmit="storeData()">
         <div class="form">
             <div class="section-center">
                 <div class="container">
@@ -152,7 +152,7 @@
                                     <span class="form-label">Attach File</span>
                                 </div>
                                 <div class="form-btn col-md-5 mx-auto">
-                                    <button class="submit-btn">Host Now</button>
+                                    <button class="submit-btn"><input type="submit" value="Host Now"/></button>
                                 </div>
                             </form>
                         </div>
@@ -163,7 +163,13 @@
     </form>
     </div>
 
-    <script src="js/jquery.min.js"></script>
+    <script>
+        function storeData() {
+            console.log("form submitted!")
+        }
+
+
+    </script>
     <!-- <script>
             $('.form-control').each(function () {
                 floatedLabel($(this));
