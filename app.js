@@ -4,6 +4,7 @@ const morgan = require('morgan');
 const listingRoutes = require('./routes/listingRoutes');
 const { auth } = require('express-openid-connect');
 
+
 const config = {
     authRequired: false,
     auth0Logout: true,
@@ -12,6 +13,8 @@ const config = {
     clientID: 'g3xYTgJ1EV83VDLANe3mYzSjIpX5hG4a',
     issuerBaseURL: 'https://dev-v1gzv39i.us.auth0.com'
   };
+
+
 
 //create application
 const app = express();
