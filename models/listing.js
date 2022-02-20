@@ -63,4 +63,11 @@ exports.save = listing => {
     //change this with database later
 }
 
+exports.search = search => {
+    listing.id = uuidv4();
+    listing.createdAt = DateTime.now().toLocaleString(DateTime.DATETIME_SHORT);
+    listings.push(listing);
+    //change this with database later
+}
+
 exports.findById = id => listings.find(listings=>listings.id ===  id);

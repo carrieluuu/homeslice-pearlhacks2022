@@ -10,6 +10,9 @@ const router = express.Router();
 //GET /listings: send all listings to the user
 router.get('/', controller.index);
 
+//POST /listings: create a search
+router.post('/', controller.search);
+
 //GET /mylistings: send all of user listings to the user
 router.get('/mylistings', controller.mylistings);
 

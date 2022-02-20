@@ -10,6 +10,14 @@ exports.index = (req, res) => {
     res.render('./listing/index', {listings, isAuthenticated: req.oidc.isAuthenticated(), user: req.oidc.user, DateTime});
 };
 
+//POST /listings: create a new listing
+exports.search = (req, res) => {
+    res.send('created a new listing');
+    let search = req.body;
+    model.search(search);
+    res.redirect('/listings');
+};
+
 //GET /listings: send all listings to the user
 exports.mylistings = (req, res) => {
     //res.send(model.find());
