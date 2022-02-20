@@ -12,23 +12,23 @@
                 <div class="container">
                     <div class="row">
                         <div class="host-form">
-                            <form>
+                            <form action="/listings" enctype="multipart/form-data" method="POST">
                                 <div class="row">
                                     <div class="col-md-4">
                                         <div class="form-group">
-                                            <input class="form-control" type="text" placeholder="Full Name">
+                                            <input class="form-control" type="text" name="name" placeholder="Full Name" required>
                                             <span class="form-label">Name</span>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="form-group">
-                                            <input class="form-control" type="email" placeholder="Enter your Email">
+                                            <input class="form-control" type="email" name="email" placeholder="Enter your Email" required>
                                             <span class="form-label">Email</span>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="form-group">
-                                            <input class="form-control" type="tel" placeholder="Enter your Phone">
+                                            <input class="form-control" type="tel" name="phone" placeholder="Enter your Phone" required>
                                             <span class="form-label">Phone</span>
                                         </div>
                                     </div>
@@ -37,19 +37,19 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <input class="form-control" type="text" placeholder="College">
+                                            <input class="form-control" type="text" name="college" placeholder="College" required>
                                             <span class="form-label">College</span>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
 
                                         <div class="form-group">
-                                            <select class="form-control" required>
+                                            <select class="form-control" name="type" required>
                                                 <option value="" selected hidden>Type of Building</option>
-                                                <option>House</option>
-                                                <option>Townhouse</option>
-                                                <option>Apartment</option>
-                                                <option>Condo</option>
+                                                <option value="House">House</option>
+                                                <option value="Townhome">Townhome</option>
+                                                <option value="Apartment">Apartment</option>
+                                                <option value="Condo">Condo</option>
                                             </select>
                                             <span class="select-arrow"></span>
                                             <span class="form-label">Housing</span>
@@ -57,31 +57,31 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" type="text" placeholder="Address Line 1">
+                                    <input class="form-control" type="text" name="address1" placeholder="Address Line 1" required>
                                     <span class="form-label">Address Line 1</span>
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" type="text" placeholder="Address Line 2">
+                                    <input class="form-control" type="text" name="address2" placeholder="Address Line 2 (optional)">
                                     <span class="form-label">Address Line 2</span>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-4">
                                         <div class="form-group">
-                                            <input class="form-control" type="text" placeholder="City">
+                                            <input class="form-control" type="text" name="city" placeholder="City" required>
                                             <span class="form-label">City</span>
                                         </div>
                                     </div>
                                     <!-- Make into drop down selection-->
                                     <div class="col-md-4">
                                         <div class="form-group">
-                                            <input class="form-control" type="text" placeholder="State">
+                                            <input class="form-control" type="text" name="state" placeholder="State" required>
                                             <span class="form-label">State</span>
                                         </div>
                                     </div>
 
                                     <div class="col-md-4">
                                         <div class="form-group">
-                                            <input class="form-control" type="text" placeholder="Zip">
+                                            <input class="form-control" type="text" name="zip" placeholder="Zip" required>
                                             <span class="form-label">Zip</span>
                                         </div>
                                     </div>
@@ -90,30 +90,34 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <input class="form-control" type="date" required>
+                                            <input class="form-control" type="date" name="start_date" required>
                                             <span class="form-label">Start of Lease</span>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <input class="form-control" type="date" required>
+                                            <input class="form-control" type="date" name="end_date" required>
                                             <span class="form-label">End of Lease</span>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" type="text" placeholder="Description">
-                                    <span class="form-label">Description</span>
+                                    <input class="form-control" type="text" name="offering" placeholder="Description" required>
+                                    <span class="form-label">Offering</span>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" type="text" name="amenities" placeholder="Amenities" required>
+                                    <span class="form-label">Amenities</span>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-4">
                                         <div class="form-group">
-                                            <select class="form-control" required>
+                                            <select class="form-control" name="bedrooms" required>
                                                 <option value="" selected hidden>Number of Bedrooms</option>
-                                                <option>1</option>
-                                                <option>2</option>
-                                                <option>3</option>
-                                                <option>4</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
                                             </select>
                                             <span class="select-arrow"></span>
                                             <span class="form-label">Rooms</span>
@@ -121,15 +125,15 @@
                                     </div>
                                     <div class="col-md-4">
                                         <div class="form-group">
-                                            <select class="form-control" required>
+                                            <select class="form-control" name="bathrooms" required>
                                                 <option value="" selected hidden>Number of Bathrooms</option>
-                                                <option>1</option>
-                                                <option>1.5</option>
-                                                <option>2</option>
-                                                <option>2.5</option>
-                                                <option>3</option>
-                                                <option>3.5</option>
-                                                <option>4</option>
+                                                <option value="1">1</option>
+                                                <option value="1.5">1.5</option>
+                                                <option value="2">2</option>
+                                                <option value="2.5">2.5</option>
+                                                <option value="3">3</option>
+                                                <option value="3.5">3.5</option>
+                                                <option value="4">4</option>
                                             </select>
                                             <span class="select-arrow"></span>
                                             <span class="form-label">Bathrooms</span>
@@ -137,13 +141,13 @@
                                     </div>
                                     <div class="col-md-4">
                                         <div class="form-group">
-                                            <input class="form-control" type="text" placeholder="Price">
+                                            <input class="form-control" type="text" name="price" placeholder="Price" required>
                                             <span class="form-label">Price</span>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control-file" type="file" placeholder="Attach File">
+                                    <input class="form-control-file" type="file" name="image" placeholder="Attach File" required>
                                     <span class="form-label">Attach File</span>
                                 </div>
                                 <div class="form-btn col-5 mx-auto">

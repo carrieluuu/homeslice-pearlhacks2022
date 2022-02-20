@@ -23,7 +23,7 @@ exports.new = (req, res) => {
 
 //POST /listings: create a new listing
 exports.create = (req, res) => {
-    res.send('created a new listing');
+    // res.send('created a new listing');
     let listing = req.body;
     model.save(listing);
     res.redirect('/listings');
