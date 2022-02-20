@@ -1,3 +1,5 @@
+const { DateTime } = require('luxon');
+
 //import model
 const model = require('../models/listing');
 
@@ -5,7 +7,7 @@ const model = require('../models/listing');
 exports.index = (req, res) => {
     //res.send(model.find());
     let listings = model.find();
-    res.render('./listing/index', {listings, isAuthenticated: req.oidc.isAuthenticated(), user: req.oidc.user});
+    res.render('./listing/index', {listings, isAuthenticated: req.oidc.isAuthenticated(), user: req.oidc.user, DateTime});
 };
 
 //GET /listings: send all listings to the user
