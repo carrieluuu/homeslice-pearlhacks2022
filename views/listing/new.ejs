@@ -7,6 +7,7 @@
                 <p class="pform">Become a Host just one form away.</p>
             </div>
         </section>
+        <form action="/listings" method="POST">
         <div class="form">
             <div class="section-center">
                 <div class="container">
@@ -16,19 +17,19 @@
                                 <div class="row">
                                     <div class="col-md-4">
                                         <div class="form-group">
-                                            <input class="form-control" type="text" placeholder="Full Name">
+                                            <input class="form-control" type="text" placeholder="Full Name" name="host_name">
                                             <span class="form-label">Name</span>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="form-group">
-                                            <input class="form-control" type="email" placeholder="Enter your Email">
+                                            <input class="form-control" type="email" placeholder="Enter your Email" name="email">
                                             <span class="form-label">Email</span>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="form-group">
-                                            <input class="form-control" type="tel" placeholder="Enter your Phone">
+                                            <input class="form-control" type="tel" placeholder="Enter your Phone" name="phone_num">
                                             <span class="form-label">Phone</span>
                                         </div>
                                     </div>
@@ -37,14 +38,14 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <input class="form-control" type="text" placeholder="College">
+                                            <input class="form-control" type="text" placeholder="College" name="college">
                                             <span class="form-label">College</span>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
 
                                         <div class="form-group">
-                                            <select class="form-control" required>
+                                            <select class="form-control" name="housing_type" required>
                                                 <option value="" selected hidden>Type of Building</option>
                                                 <option>House</option>
                                                 <option>Townhouse</option>
@@ -57,31 +58,31 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" type="text" placeholder="Address Line 1">
+                                    <input class="form-control" type="text" placeholder="Address Line 1" name="address_1">
                                     <span class="form-label">Address Line 1</span>
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" type="text" placeholder="Address Line 2">
+                                    <input class="form-control" type="text" placeholder="Address Line 2" name="address_2">
                                     <span class="form-label">Address Line 2</span>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-4">
                                         <div class="form-group">
-                                            <input class="form-control" type="text" placeholder="City">
+                                            <input class="form-control" type="text" placeholder="City" name="city">
                                             <span class="form-label">City</span>
                                         </div>
                                     </div>
                                     <!-- Make into drop down selection-->
                                     <div class="col-md-4">
                                         <div class="form-group">
-                                            <input class="form-control" type="text" placeholder="State">
+                                            <input class="form-control" type="text" placeholder="State" name="state">
                                             <span class="form-label">State</span>
                                         </div>
                                     </div>
 
                                     <div class="col-md-4">
                                         <div class="form-group">
-                                            <input class="form-control" type="text" placeholder="Zip">
+                                            <input class="form-control" type="text" placeholder="Zip" name="zip">
                                             <span class="form-label">Zip</span>
                                         </div>
                                     </div>
@@ -90,25 +91,29 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <input class="form-control" type="date" required>
+                                            <input class="form-control" type="date" name="start_stay" required>
                                             <span class="form-label">Start of Lease</span>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <input class="form-control" type="date" required>
+                                            <input class="form-control" type="date" name="end_stay" required>
                                             <span class="form-label">End of Lease</span>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" type="text" placeholder="Description">
+                                    <input class="form-control" type="text" placeholder="Description" name="offering_description">
                                     <span class="form-label">Description</span>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" type="text" placeholder="Amenities" name="amenities">
+                                    <span class="form-label">Amenities</span>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-4">
                                         <div class="form-group">
-                                            <select class="form-control" required>
+                                            <select class="form-control" name="num_of_bedrooms" required>
                                                 <option value="" selected hidden>Number of Bedrooms</option>
                                                 <option>1</option>
                                                 <option>2</option>
@@ -121,7 +126,7 @@
                                     </div>
                                     <div class="col-md-4">
                                         <div class="form-group">
-                                            <select class="form-control" required>
+                                            <select class="form-control" name="num_of_bathrooms" required>
                                                 <option value="" selected hidden>Number of Bathrooms</option>
                                                 <option>1</option>
                                                 <option>1.5</option>
@@ -137,13 +142,13 @@
                                     </div>
                                     <div class="col-md-4">
                                         <div class="form-group">
-                                            <input class="form-control" type="text" placeholder="Price">
+                                            <input class="form-control" type="text" placeholder="Price" name="price">
                                             <span class="form-label">Price</span>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control-file" type="file" placeholder="Attach File">
+                                    <input class="form-control-file" type="file" placeholder="Attach File" name="image_path">
                                     <span class="form-label">Attach File</span>
                                 </div>
                                 <div class="form-btn">
@@ -155,6 +160,7 @@
                 </div>
             </div>
         </div>
+    </form>
     </div>
 
     <script src="js/jquery.min.js"></script>
