@@ -37,8 +37,120 @@
         </div>
     </section><!-- End Intro -->
 
-    <section>
-        
+    <section id="GCPMap">
+        <h2>Recommended For You</h2>
+        <p>Based on your location services, here's the top housing options for you!
+        </p>
+        <button type="button" class="btn btn-secondary" id="clickme">Find
+            Closest</button>
+        <!--The div element for the map -->
+        <div class="mapcontainer">
+            <div id="map"></div>
+            <script>
+                // Initialize and add the map
+                let map;
+                function initMap() {
+                    map = new google.maps.Map(document.getElementById('map'), {
+                        zoom: 8,
+                        center: { lat: 36, lng: -80 }
+                    });
+
+                    const cities = [
+                        { lat: 35.967280, lng: -79.056970 }, // Sarah Fisher
+                        { lat: 35.921839, lng: -79.054783 }, // Seth Fields
+                        { lat: 35.923540, lng: -79.051500 }, // Kelvin Williams
+                        { lat: 35.312060, lng: -80.717880 }, // Clayton Tatum
+                        { lat: 35.300290, lng: -80.732320 }, // Nina Moren
+                        { lat: 35.312773, lng: -80.718518 } // Taylor Peterson
+
+                    ];
+
+                    // Loop through cities, adding markers
+                    for (let i = 0; i < cities.length; i++) {
+                        let position = cities[i]; // location of one city
+                        // create marker for a city
+                        let mk = new google.maps.Marker({ position: position, map: map });
+                    }
+
+                    var btn = document.getElementById("clickme");
+
+                    btn.addEventListener("click", findClosest);
+
+                    function findClosest() {
+
+                        // Add Distance Matrix here
+
+                        const service = new google.maps.DistanceMatrixService(); // instantiate Distance Matrix service
+                        const matrixOptions = {
+                            origins: ["35.967280, -79.056970", "35.921839, -79.054783", "35.923540, -79.051500", "35.312060, -80.717880", "35.300290, -80.732320", "35.312773, -80.718518"], // technician locations
+                            destinations: ["209 South Road, Chapel Hill, NC, 27599"], // unc chapel hill address
+                            travelMode: 'DRIVING',
+                            unitSystem: google.maps.UnitSystem.IMPERIAL
+                        };
+
+                        // Call Distance Matrix service
+                        service.getDistanceMatrix(matrixOptions, callback);
+
+                        // Callback function used to process Distance Matrix response
+                        function callback(response, status) {
+                            if (status !== "OK") {
+                                alert("Error with distance matrix.");
+                                return;
+                            }
+
+                            console.log(response);
+
+                            let routes = response.rows[0].elements;
+                            let leastseconds = 86400; // 24 hours
+                            let drivetime = "";
+                            let closest = "";
+
+                            for (let i = 0; i < routes.length; i++) {
+                                let routeseconds = routes[i].duration.value;
+                                if (routeseconds > 0 && routeseconds < leastseconds) {
+                                    leastseconds = routeseconds; // this route is the shortest (so far)
+                                    drivetime = routes[i].duration.text; // hours and minutes
+                                    closest = response.originAddresses[i]; // city name from destinations
+                                }
+                            }
+                            alert("The closest location is " + closest + " (" + drivetime + ")");
+
+                            // setTimeout(function () { alert("The closest location is " + closest + " (" + drivetime + ")"); }, 20000);
+                        }
+                    }
+                }
+            </script>
+            <script async defer
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgGqZPuoY-7fw-H9ma3qD9Yx9euKO6GOI&callback=initMap">
+                </script>
+        </div>
     </section>
+
+    <section id="features">
+        <h1>What We Offer</h1>
+        <br>
+        <div class="card-group">
+            <div class="card">
+                <img src="../img/housing.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Convenient and student-friendly housing near campus</h5>
+                </div>
+            </div>
+            <div class="card">
+                <img  src="../img/community.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Interactive map search to help find friendly tenants and caring landlords
+                    </h5>
+                </div>
+            </div>
+            <div class="card">
+                <img src="../img/personalized.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Personalized housing options</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <%- include('./partials/footer.ejs') %>

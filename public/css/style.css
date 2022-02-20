@@ -224,6 +224,45 @@ nav {
   color: grey;
 }
 
+/* GCP Map */
+#GCPMap {
+  padding-left: 30px;
+  padding-top: 30px;
+}
+
+#map {
+  height: 700px;
+  width: 800px;
+}
+
+.mapcontainer {
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  display: flex;
+  justify-content: left;
+  padding-bottom: 20px;
+}
+
+#features {
+  padding-left: 30px;
+  padding-top: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+}
+
+.card-img-top {
+  height: 400px;
+}
+
+.card {
+  width: 300px;
+  display: flex;
+  justify-content: center;
+}
+
 /* listing */
 .tm-listing-box-1 {
   width: 100%;
