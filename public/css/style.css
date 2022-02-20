@@ -1598,10 +1598,52 @@ span.flatpickr-weekday {
 
 /* End of Search CSS */
 
+/* Banner */
+#banner {
+  -moz-align-items: center;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  background-image: url("../img/banner.jpg");
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  /* display: -moz-flex;
+  display: -webkit-flex;
+  display: -ms-flex; */
+  display: flex;
+  padding: 6em 0 2em 0;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom: 0 !important;
+  cursor: default;
+  height: 60vh;
+  margin-bottom: -3.25em;
+  max-height: 32em;
+  min-height: 22em;
+  top: -3.25em;
+  display: flex;
+  justify-content: center;
+}
+.h1form {
+  font-size: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.pform {
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+}
+
 /* Host Form */
-#host .container {
-  font: #fff;
-  background-image: url("../img/hostformbg.jpg");
+
+.form {
+  display: block;
+  margin-bottom: 100px;
+  margin-top: 100px;
 }
 .host-form {
   position: relative;
@@ -1611,7 +1653,6 @@ span.flatpickr-weekday {
   padding: 40px;
   overflow: hidden;
   border-radius: 20px;
-  z-index: 20;
 }
 
 .host-form::before {
@@ -1631,7 +1672,7 @@ span.flatpickr-weekday {
 }
 
 .host-form .form-control {
-  background-color: rgb(208, 198, 255);
+  background-color: rgb(233, 228, 255);
   height: 60px;
   padding: 0px 25px;
   border: none;
@@ -1644,15 +1685,15 @@ span.flatpickr-weekday {
 }
 
 .host-form .form-control::-webkit-input-placeholder {
-  color: rgba(119, 119, 119, 0.5);
+  color: #8187dc;
 }
 
 .host-form .form-control:-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.5);
+  color: #8187dc;
 }
 
 .host-form .form-control::placeholder {
-  color: rgba(255, 255, 255, 0.5);
+  color: #8187dc;
 }
 
 .host-form .form-control:focus {
@@ -1665,7 +1706,7 @@ span.flatpickr-weekday {
 }
 
 .host-form input[type="date"].form-control:invalid {
-  color: rgba(255, 255, 255, 0.5);
+  color: #8187dc;
 }
 
 .host-form input[type="date"].form-control + .form-label {
@@ -1680,7 +1721,7 @@ span.flatpickr-weekday {
 }
 
 .host-form select.form-control:invalid {
-  color: rgba(255, 255, 255, 0.5);
+  color: #8187dc;
 }
 
 .host-form select.form-control + .select-arrow {
@@ -1694,7 +1735,7 @@ span.flatpickr-weekday {
   height: 32px;
   text-align: center;
   pointer-events: none;
-  color: rgba(255, 255, 255, 0.5);
+  color: #8187dc;
   font-size: 14px;
 }
 
@@ -1706,7 +1747,7 @@ span.flatpickr-weekday {
 }
 
 .host-form select.form-control option {
-  color: rgb(197, 197, 197);
+  color: #8187dc;
 }
 
 .host-form .form-label {
@@ -1735,7 +1776,7 @@ span.flatpickr-weekday {
 }
 
 .host-form .form-control-file {
-  color: rgba(255, 255, 255, 0.5);
+  color: #8187dc;
 }
 
 .host-form .submit-btn {
@@ -1766,7 +1807,7 @@ footer {
   text-align: center;
   padding: 10px;
   width: 100%;
-  position: fixed;
+  /* position: fixed; */
   bottom: 0;
   left: 0;
 }
