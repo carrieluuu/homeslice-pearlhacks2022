@@ -95,4 +95,246 @@ h1 {
   textarea {
     font-family: Arial, Helvetica, sans-serif;
   }
-  
+
+/* End of Search CSS */
+
+/* Banner */
+#banner {
+  -moz-align-items: center;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  background-image: url("../img/banner.jpg");
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  /* display: -moz-flex;
+  display: -webkit-flex;
+  display: -ms-flex; */
+  display: flex;
+  padding: 6em 0 2em 0;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom: 0 !important;
+  cursor: default;
+  height: 60vh;
+  margin-bottom: -3.25em;
+  max-height: 32em;
+  min-height: 22em;
+  top: -3.25em;
+  display: flex;
+  justify-content: center;
+}
+.h1form {
+  font-size: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.pform {
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Host Form */
+
+.form {
+  display: block;
+  margin-bottom: 100px;
+  margin-top: 100px;
+}
+.host-form {
+  position: relative;
+  max-width: 5542px;
+  width: 100%;
+  margin: auto;
+  padding: 40px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.host-form::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background: rgba(216, 205, 255, 0.815);
+  z-index: -1;
+}
+
+.host-form .form-group {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.host-form .form-control {
+  background-color: rgb(233, 228, 255);
+  height: 60px;
+  padding: 0px 25px;
+  border: none;
+  border-radius: 40px;
+  color: rgb(126, 126, 126);
+  -webkit-box-shadow: 0px 0px 0px 2px transparent;
+  box-shadow: 0px 0px 0px 2px transparent;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.host-form .form-control::-webkit-input-placeholder {
+  color: #8187dc;
+}
+
+.host-form .form-control:-ms-input-placeholder {
+  color: #8187dc;
+}
+
+.host-form .form-control::placeholder {
+  color: #8187dc;
+}
+
+.host-form .form-control:focus {
+  -webkit-box-shadow: 0px 0px 0px 2px #8187dc;
+  box-shadow: 0px 0px 0px 2px #757bcb;
+}
+
+.host-form input[type="date"].form-control {
+  padding-top: 16px;
+}
+
+.host-form input[type="date"].form-control:invalid {
+  color: #8187dc;
+}
+
+.host-form input[type="date"].form-control + .form-label {
+  opacity: 1;
+  top: 10px;
+}
+
+.host-form select.form-control {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.host-form select.form-control:invalid {
+  color: #8187dc;
+}
+
+.host-form select.form-control + .select-arrow {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 32px;
+  line-height: 32px;
+  height: 32px;
+  text-align: center;
+  pointer-events: none;
+  color: #8187dc;
+  font-size: 14px;
+}
+
+.host-form select.form-control + .select-arrow:after {
+  content: "\279C";
+  display: block;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.host-form select.form-control option {
+  color: #8187dc;
+}
+
+.host-form .form-label {
+  position: absolute;
+  top: -10px;
+  left: 25px;
+  opacity: 0;
+  color: #8187dc;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  height: 15px;
+  line-height: 15px;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+
+.host-form .form-group.input-not-empty .form-control {
+  padding-top: 16px;
+}
+
+.host-form .form-group.input-not-empty .form-label {
+  opacity: 1;
+  top: 10px;
+}
+
+.host-form .form-control-file {
+  color: #8187dc;
+}
+
+.host-form .submit-btn {
+  color: #fff;
+  background-color: #8187dc;
+  font-weight: 700;
+  height: 60px;
+  padding: 10px 30px;
+  width: 100%;
+  border-radius: 40px;
+  border: none;
+  text-transform: uppercase;
+  font-size: 16px;
+  letter-spacing: 1.3px;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+
+.host-form .submit-btn:hover,
+.host-form .submit-btn:focus {
+  opacity: 0.9;
+}
+/* Host Form */
+
+footer {
+  color: white;
+  background-color: #757bcb;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+  position: block;
+  bottom: 0;
+  left: 0;
+}
+
+#topic {
+  width: 50%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+label {
+  font-size: small;
+}
+
+td {
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+.align-top {
+  vertical-align: top;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.fixed-width {
+  width: 300px;
+}
