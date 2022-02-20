@@ -8,9 +8,15 @@ exports.index = (req, res) => {
     res.render('./listing/index', {listings});
 };
 
+//GET /listings: send all listings to the user
+exports.mylistings = (req, res) => {
+    //res.send(model.find());
+    res.render('./listing/mylistings', {isAuthenticated: req.oidc.isAuthenticated(), user: req.oidc.user});
+};
+
 //GET /listings/new: send html form for creating a new listing
 exports.new = (req, res) => {
-    res.render('./listing/new')
+    res.render('./listing/new', {isAuthenticated: req.oidc.isAuthenticated(), user: req.oidc.user});
 };
 
 //POST /listings: create a new listing
@@ -28,9 +34,9 @@ exports.details = (req, res) => {
     let listing = model.findById(id);
     //check if id exists
     if(listing) {
-        res.render('./listing/details');
+        res.render('./listing/details', {listing:listing, isAuthenticated: req.oidc.isAuthenticated(), user: req.oidc.user});
     } else {
-        res.status(404).send('Cannot find topic with id ' + id);
+        res.status(404).send('Cannot find listing with id ' + id);
     }
 };
 
