@@ -3,10 +3,17 @@
     <div class="container">
         <div class="row col-lg-12">
             <div class="col-9">
-                <h2><%=listing.address_1%><%if(listing.address_2!=null){%>, <%=listing.address_2%><%}%></h2>
+                <h2>
+                    <%=listing.address_1%>
+                        <%if(listing.address_2!=null){%>, <%=listing.address_2%>
+                                <%}%>
+                </h2>
             </div>
             <div class="col-9">
-                <h4><%=listing.city%>, <%=listing.state%> <%=listing.zip%></h4>
+                <h4>
+                    <%=listing.city%>, <%=listing.state%>
+                            <%=listing.zip%>
+                </h4>
             </div>
             <br />
             <div class="col-lg-7">
@@ -52,17 +59,70 @@
             </h5>
             <br>
             <%if(isAuthenticated){%>
-            <%if(listing.email==user.email){%>
-            <a class="btn btn-primary" href="/listings" role="button" style="border-radius: 40px; border-color: #757bcb; background-color: #757bcb;">Edit</a>
-            <a class="btn btn-primary" href="/listings" role="button" style="border-radius: 40px; border-color: #ff2b2b; background-color: #ff2b2b;">Delete</a>
-            <%} else { %>
-            <a class="btn btn-primary" href="/listings" role="button" style="border-radius: 40px; border-color: #757bcb; background-color: #757bcb;">Book Me!</a>
-            <%}}%>
-            <br>
-            <br>
-            <br>
+                <%if(listing.email==user.email){%>
+                    <a class="btn btn-primary" href="/listings" role="button"
+                        style="border-radius: 40px; border-color: #757bcb; background-color: #757bcb;">Edit</a>
+                    <a class="btn btn-primary" href="/listings" role="button"
+                        style="border-radius: 40px; border-color: #ff2b2b; background-color: #ff2b2b;">Delete</a>
+                    <%} else { %>
+                        <a class="btn btn-primary" href="/listings" role="button"
+                            style="border-radius: 40px; border-color: #757bcb; background-color: #757bcb;">Book Me!</a>
+                        <%}}%>
+                            <br>
+                            <br>
+                            <br>
         </div>
     </div>
+    </div>
+    <div class="detailsContent">
+        <div class="reviews">
+            <h1>Reviews</h1> <br><br>
+
+            <div class="card">
+                <div class="card-header">
+                    Nick Jonas
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Best 4 years of my life</h5>
+                    <p class="card-text">There's nowhere else I'd rather spent the best years of my life at. Nina was
+                        such
+                        an incredible and caring host.</p>
+                    <div class="card-footer text-muted">
+                        Rating: 9/10
+                    </div>
+                </div>
+            </div>
+            <br>
+
+            <div class="card">
+                <div class="card-header">
+                    Kanye West
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Loved this place more than I love myself</h5>
+                    <p class="card-text">Even after I broke up with my ex, Nina really made this feel like my home. I
+                        got along so well with my two other roommates as well!</p>
+                    <div class="card-footer text-muted">
+                        Rating: 8/10
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <div class="card">
+                <div class="card-header">
+                    Kendall Jenner
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Loved it!</h5>
+                    <p class="card-text">Nina's place was amazing! Super clean, great location and exactly like the
+                        pictures! She always responded to my messages very quickly! Absolute perfection!</p>
+                    <div class="card-footer text-muted">
+                        Rating: 10/10
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <%- include('../partials/footer.ejs') %>
