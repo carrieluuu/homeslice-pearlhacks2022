@@ -10,6 +10,9 @@ const router = express.Router();
 //GET /listings: send all listings to the user
 router.get('/', controller.index);
 
+//GET /mylistings: send all of user listings to the user
+router.get('/mylistings', controller.mylistings);
+
 //GET /listings/new: send html form for creating a new listing
 router.get('/new', controller.new);
 

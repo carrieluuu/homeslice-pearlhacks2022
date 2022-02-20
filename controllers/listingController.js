@@ -8,9 +8,15 @@ exports.index = (req, res) => {
     // res.render('/listings/index', {listings});
 };
 
+//GET /listings: send all listings to the user
+exports.mylistings = (req, res) => {
+    //res.send(model.find());
+    res.render('./listing/mylistings', {isAuthenticated: req.oidc.isAuthenticated(), user: req.oidc.user});
+};
+
 //GET /listings/new: send html form for creating a new listing
 exports.new = (req, res) => {
-    res.render('./listing/new')
+    res.render('./listing/new', {isAuthenticated: req.oidc.isAuthenticated(), user: req.oidc.user});
 };
 
 //POST /listings: create a new listing
