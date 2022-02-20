@@ -12,8 +12,8 @@ exports.index = (req, res) => {
 
 //GET /listings: send all listings to the user
 exports.mylistings = (req, res) => {
-    //res.send(model.find());
-    res.render('./listing/mylistings', {isAuthenticated: req.oidc.isAuthenticated(), user: req.oidc.user});
+    let listings = model.find();
+    res.render('./listing/mylistings', {listings, isAuthenticated: req.oidc.isAuthenticated(), user: req.oidc.user, DateTime});
 };
 
 //GET /listings/new: send html form for creating a new listing

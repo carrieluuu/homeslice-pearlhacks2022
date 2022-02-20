@@ -1,8 +1,47 @@
 <%- include('../partials/header.ejs') %>
 
-    <div class = "content">
-        <h3>My Listings</h3> 
-        <p>This is a place where you can share your exciting apartment openings and any reviews.</p>
+<div id="host" class="section"></div>
+    <section id="banner">
+        <div class="inner">
+            <h1 class="h1form">My Listings</h1>
+            <p class="pform">View your listings below</p>
+        </div>
+    </section>
+</div>
+<section class="container tm-home-section-1" id="more">
+ <br><br><br><br>
+    
+<div class="row">
+    <% if(listings.length) { listings.forEach(listing=>{ if(listing.email=='nmoren@example.com'){%>
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+        <a href="/listings/<%=listing.id%>" style="color:black">
+        <div class="tm-listing-box-1">
+            <img src="/img/<%=listing.image_path%>" alt="image" class="img-responsive" style="width: 100%">
+            <div class="tm-listing-box-1-info">
+                <div class="tm-listing-box-1-info-left">
+                    <p class="text-uppercase margin-bottom-20"><%=listing.college%></p>
+                    <p class="margin-bottom-20"><%=listing.housing_type%></p>
+                    <p style="color:blueviolet"><%=DateTime.fromSeconds(parseInt(listing.start_stay)).toLocaleString(DateTime.DATETIME_SHORT)%></p>
+                </div>
+                <div class="tm-listing-box-1-info-right">
+                    <p class="listing-1-description"><%=listing.offering_description%></p>
+                </div>
+            </div>
+            <div class="tm-listing-box-1-link">
+                <div class="tm-listing-box-1-link-left">
+                    Bed: <%=listing.num_of_bedrooms %> &nbsp; | &nbsp; Bath: <%=listing.num_of_bathrooms %> 
+                </div>
+                <div class="tm-listing-box-1-link-right">
+                    $<%=listing.price%>
+                </div>
+            </div>
+        </a>
+        </div>
+    
     </div>
+  
+    <% } }); } %>
+</div>
+</section>
 
 <%- include('../partials/footer.ejs') %>
