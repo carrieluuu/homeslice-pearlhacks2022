@@ -37,12 +37,19 @@
         </div>
     </section><!-- End Intro -->
 
-    <section id="GCPMap">
-        <h2>Recommended For You</h2>
-        <p>Based on your location services, here's the top housing options for you!
-        </p>
-        <button type="button" class="btn btn-secondary" id="clickme"  style="border-radius: 40px; border-color: #757bcb; background-color: #757bcb;">Find
-            Closest</button>
+    <div id="GCPMap">
+        <div id="homeContent">
+            <h2>Recommended For You</h2>
+        </div>
+        <div id="homeContent">
+            <p>Based on your location services, here's the top housing options for you!</p>
+        </div>
+        <div id="homeContent">
+            <button type="button" class="btn btn-secondary" id="clickme" style="border-radius: 40px; border-color: #757bcb; background-color: #757bcb;">Find
+                Closest</button>
+        </div>
+        
+        
         <!--The div element for the map -->
         <div class="mapcontainer">
             <div id="map"></div>
@@ -127,23 +134,24 @@
     </section>
 
     <section id="features">
-        <h1>What We Offer</h1>
+        <div id="homeContent"><h2>What We Offer</h2></div>
+        
         <br>
         <div class="card-group">
-            <div class="card">
+            <div class="card homeInfo">
                 <img src="../img/housing.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Convenient and student-friendly housing near campus</h5>
                 </div>
             </div>
-            <div class="card">
+            <div class="card homeInfo">
                 <img  src="../img/community.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Interactive map search to help find friendly tenants and caring landlords
                     </h5>
                 </div>
             </div>
-            <div class="card">
+            <div class="card homeInfo">
                 <img src="../img/personalized.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Personalized housing options</h5>

@@ -238,6 +238,8 @@ nav {
 .mapcontainer {
   display: flex;
   justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .button {
@@ -330,6 +332,10 @@ nav {
   height: 60px;
 }
 
+
+#more {
+  margin-bottom: 300px;
+}
 .margin-bottom-15 {
   margin-bottom: 15px;
 }
@@ -2056,4 +2062,17 @@ td {
 #listingsImages {
   width: 100%;
    height: 300px;
+}
+
+
+
+.homeInfo {
+  padding: 30px;
+  margin: 50px;
+  background-color: lavender;
+}
+
+#homeContent {
+  display: flex;
+  justify-content: center;
 }
